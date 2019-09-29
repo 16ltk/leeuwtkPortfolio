@@ -1,0 +1,44 @@
+<% include ../partials/header %>
+
+    
+    
+    <header class="jumbotron">
+        <div class="container">
+            <h1><i class="fas fa-camera-retro"></i> The Developers Hub</h1>
+            <h4 id="brilliant-slogan">...#4IR - let's collaborate</h4>
+            
+            <p>
+                <a href="https://github.com/16ltk/leeuwtkPortfolioV1">GitHub</a>
+            </p>
+            
+            <% if(currentUser && currentUser.isAdmin) { %>
+                <p>
+                    <a class="btn btn-primary btn-large" href="/devprojects/new">Add Project</a>
+                </p>   
+            <% } %>
+        </div>
+    </header>
+    
+    <div class="container-fluid">
+    <div class="row">
+        <% projects.forEach(function(project){ %>
+            <div class="col-md-4 col-sm-8">
+                <div class="thumbnail animated rotateIn view overlay zoom">
+                    <img class="img-fluid rounded-circle zoom" alt="zoom" src="<%= project.image%>">
+                    
+                    <div class="caption">
+                        <h4><%= project.name %></h4>
+                    </div>
+                    <p>
+                        <a href="/devprojects/<%=project._id%>" class="btn btn-indigo">More Info</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+    </div>
+    
+    
+
+<% include ../partials/footer %>
+
