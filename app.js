@@ -17,7 +17,10 @@ var express = require("express"), //reuire to use "express"
     commentRoutes = require("./routes/comments"),
     indexRoutes = require("./routes/index");
 
-mongoose.connect('mongodb://leeuwtk:leeuwtk123@ds135421.mlab.com:35421/brilliant', { useNewUrlParser: true })
+//mongoose.connect("mongodb://localhost/brill_iant"); //Local DB //connect to DB for testing
+mongoose.connect('mongodb://leeuwtk:leeuwtk123@ds135421.mlab.com:35421/brilliant', { useNewUrlParser: true })//Heroku (Production)
+
+//old dbs /deprecated
 //mongoose.connect("mongodb://localhost/service_desk"); //Local DB //connect to DB "service_desk"
 //mongoose.connect("mongodb://leeuwtk:leeuwtk123@ds261078.mlab.com:61078/servicedesk"); //Heroku (Production)
 
@@ -54,12 +57,13 @@ app.use(commentRoutes);
 app.use(indexRoutes);
 
 
-
-app.listen(3000, function () {
- console.log("App listening on port 3000!");
-});
-
-//app.listen(process.env.PORT, process.env.IP, function()
-//{
-//    console.log("The Developers Hub server has started...");
+//testing/devlopment
+//app.listen(3000, function () {
+// console.log("App listening on port 3000!");
 //});
+
+//production
+app.listen(process.env.PORT, process.env.IP, function()
+{
+    console.log("The Developers Hub server has started...");
+});
