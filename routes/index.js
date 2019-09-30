@@ -133,7 +133,7 @@ router.get("/logout", function(req, res)
 });
 
 //USER Profile - Default
-router.get("/developers", function(req, res) 
+router.get("/developer", function(req, res) 
 {
     User.findById(req.params.id, function(err, foundUser)
     {
@@ -147,7 +147,7 @@ router.get("/developers", function(req, res)
 });
 
 //USER Profile via Submitted Pic
-router.get("/developers/:id", function(req, res)
+router.get("/developer/:id", function(req, res)
 {
     User.findById(req.params.id, function(err, foundUser)
     {
