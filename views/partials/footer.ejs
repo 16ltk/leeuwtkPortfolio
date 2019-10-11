@@ -1,9 +1,40 @@
+  
+  <button onclick="topFunction()" id="sb" title="Scroll to Top Page">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
   <!-- Footer -->
   <footer class="bg-light py-5">
       <div class="container">
           <div class="small text-center text-muted">Copyright &copy; 2019 - Leeuw TK Porfolio</div>
       </div>
   </footer>
+
+   <!-- Temp Code -->
+   <script>
+    sb = document.getElementById("sb"); //find button
+    window.onscroll = function() {scrollFunction()}; //show button
+    
+    function scrollFunction() 
+    {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+        {
+            sb.style.display = "block";
+        } 
+        else 
+        {
+            sb.style.display = "none";
+        }
+    }
+
+    // Scroll back
+    function topFunction() 
+    {
+        document.documentElement.scrollTop = 0; //Compatability: Chrome, Firefox and IE
+        document.body.scrollTop = 0; // Compatabilty: IOS (Safari)
+    }
+    </script>
+    <!-- Temp Code -->
 
 
  <!-- Bootstrap core JavaScript -->
