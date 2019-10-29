@@ -58,12 +58,12 @@ app.use(indexRoutes);
 
 
 //testing/devlopment
-app.listen(3123, function () {
-console.log("App listening on port 3000!");
-});
+// app.listen(3123, function () {
+// console.log("App listening on port 3000!");
+// });
 
 //production
-// app.listen(process.env.PORT, process.env.IP, function()
-// {
-//     console.log("The Developers Hub server has started...");
-// });
+app.listen(process.env.PORT, process.env.IP, function()
+{
+    console.log("The Developers Hub server has started...");
+});
