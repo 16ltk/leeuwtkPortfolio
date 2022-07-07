@@ -33,7 +33,7 @@
     "jquery.easing": "^1.4.1",
     "mdbootstrap": "^4.8.10",
     "method-override": "^3.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "mongoose": "^5.7.1",
     "node": "^12.11.0",
     "node-geocoder": "^3.24.0",
